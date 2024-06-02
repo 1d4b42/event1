@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>solve flag</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #00ff00;
+      background-color: #000;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('background.gif') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.6); /* 明るさ調整 */
+      z-index: -1;
+    }
+
+    .content {
+      z-index: 1;
+      padding: 20px;
+      background-color: rgba(51, 51, 51, 0.8); /* 背景の半透明色 */
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #00ff00;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #333;
+      color: #00ff00;
+    }
+
+    button {
+      padding: 8px 15px;
+      background-color: #00ff00;
+      color: #121212;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background-color: #00cc00;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #00ff00;
+      text-shadow: 0 0 5px #00ff00;
+    }
+
+    .error {
+      color: red;
+    }
+
+    #notes_w {
+      border: 1px solid #00ff00;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #333;
+      color: #00ff00;
+    }
+    a {
+      color: #00ff00; /* リンク色を紫色に設定 */
+    }
+  </style>
+
+  <script type="text/javascript" src="obfuscated.js">
+
+  </script>
+</head>
+<body onload="setupArrowKeyNavigation()">
+  <div class="background"></div>
+  <div class="content">
+    <span id="error-message" class="error"></span>
+    <span id="error-message-output" class="error"></span>
+
+    Input your command here: 
+    <input type="text" id="flagInput" placeholder="Enter string">
+    <button onclick="checkCommand()">Enter</button><br><br>
+    <div id="flagOutput"></div>
+  </div>
+</body>
+</html>
